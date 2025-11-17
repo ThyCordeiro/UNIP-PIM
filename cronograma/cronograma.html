@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma</title>
+  <link rel="stylesheet" href="cronograma.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav">
+      <div class="menu_nav">
+        <ul>
+          <a href="/chat/chat.html">
+            <li>Chat</li>
+          </a>
+          <a href="/videos/videos.html">
+            <li>Vídeos</li>
+          </a>
+          <a href="/cronograma/cronograma.html">
+            <li>Cronograma</li>
+          </a>
+          <a href="/media/media.html">
+            <li>Média</li>
+          </a>
+
+      </div>
+    </div>
+  </nav>
+
+  </nav>
+  <h1>Cronograma de Estudos</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Horário</th>
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <script>
+        const tbody = [];
+        for (let h = 8; h <= 22; h++) {
+          const inicio = String(h).padStart(2, "0") + ":00";
+          const fim = String(h + 1).padStart(2, "0") + ":00";
+          tbody.push(`
+            <tr>
+              <td>${inicio} - ${fim}</td>
+              <td><input type="text" name="segunda${h}"></td>
+              <td><input type="text" name="terca${h}"></td>
+              <td><input type="text" name="quarta${h}"></td>
+              <td><input type="text" name="quinta${h}"></td>
+              <td><input type="text" name="sexta${h}"></td>
+            </tr>
+          `);
+        }
+        document.write(tbody.join(""));
+      </script>
+    </tbody>
+  </table>
+
+  <button onclick="salvarCronograma()">💾 Salvar Cronograma</button>
+  <button onclick="resetarCronograma()">🗑️ Resetar Cronograma</button>
+
+  <script>
+
+
+    function salvarCronograma() {
+      const inputs = document.querySelectorAll("input");
+      inputs.forEach(input => {
+        localStorage.setItem(input.name, input.value);
+      });
+      alert("✅ Cronograma salvo com sucesso!");
+    }
+
+    function resetarCronograma() {
+      if (confirm("Tem certeza que deseja apagar todo o cronograma?")) {
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach(input => {
+          input.value = "";
+          localStorage.removeItem(input.name);
+        });
+      }
+    }
+
+    window.onload = () => {
+      const inputs = document.querySelectorAll("input");
+      inputs.forEach(input => {
+        input.value = localStorage.getItem(input.name) || "";
+      });
+    };
+  </script>
+</body>
+
+</html>

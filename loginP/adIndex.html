@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAINEL PROFESSOR</title>
+  <link rel="stylesheet" href="/loginP/cadastro.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="titulo">PAINEL PROFESSOR</h1>
+
+    <!-- Formulário de Login -->
+    <form id="login">
+      <input type="email" id="Aloginemail" placeholder="Email" required>
+      <input type="password" id="Aloginsenha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p id="mensagem"></p>
+  </div>
+
+  <script type="module" src="/loginP/Admin.js"></script>
+  <script>
+    // Alternar entre Login e Registro
+    const loginForm = document.getElementById('loginA');
+    const titulo = document.getElementById('titulo');
+    console.log("Interceptando login...");
+
+    document.getElementById('mostrarLogin').addEventListener('click', (e) => {
+      e.preventDefault();
+      registerForm.classList.remove('active');
+      loginForm.classList.add('active');
+      titulo.textContent = 'Login';
+    });
+  </script>
+</body>
+
+</html>

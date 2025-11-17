@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="titulo">Login</h1>
+
+    <!-- Formulário de Login -->
+    <form id="login" class="form active">
+      <input type="email" id="loginemail" placeholder="Email" required />
+      <input type="password" id="loginsenha" placeholder="Senha" required />
+      <button id="loginBtn" type="submit">Entrar</button>
+      <p class="toggle">Não tem conta? <a href="#" id="mostrarCadastro">Registre-se</a></p>
+    </form>
+
+    <!-- Formulário de Registro -->
+    <form id="register" class="form">
+      <input type="text" id="nome" placeholder="Nome" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+
+      <!-- Cursos vindos do Firestore -->
+      <select id="curso" required>
+        <option value disabled selected>Carregando cursos...</option>
+      </select>
+
+
+      <select id="genero" required>
+        <option value disabled selected>Selecione o gênero</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" required />
+
+      <button id="registerBtn" type="submit">Registrar</button>
+      <p class="toggle">Já tem conta? <a href="#" id="mostrarLogin">Faça
+          login</a></p>
+    </form>
+
+    <script type="module" src="app.js"></script>
+    <script>
+      // Alternar entre Login e Registro
+      const loginForm = document.getElementById('login');
+      const registerForm = document.getElementById('register');
+      const titulo = document.getElementById('titulo');
+
+      document.getElementById('mostrarCadastro').addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.classList.remove('active');
+        registerForm.classList.add('active');
+        titulo.textContent = 'Cadastro';
+      });
+
+      document.getElementById('mostrarLogin').addEventListener('click', (e) => {
+        e.preventDefault();
+        registerForm.classList.remove('active');
+        loginForm.classList.add('active');
+        titulo.textContent = 'Login';
+      });
+    </script>
+</body>
+
+</html>

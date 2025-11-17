@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Biblioteca de Vídeos</title>
+  <link rel="stylesheet" href="videos.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav">
+      <div class="menu_nav">
+        <ul>
+          <a href="/chat/chat.html">
+            <li>Chat</li>
+          </a>
+          <a href="/videos/videos.html">
+            <li>Vídeos</li>
+          </a>
+          <a href="/cronograma/cronograma.html">
+            <li>Cronograma</li>
+          </a>
+          <a href="/media/media.html">
+            <li>Média</li>
+          </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <h1>Videos de Estudos</h1>
+
+  <form id="formVideo">
+    <input type="text" id="titulo" placeholder="Título do vídeo" required />
+    <input type="url" id="url" placeholder="URL do vídeo (YouTube)" required />
+    <button type="submit">Adicionar Vídeo</button>
+
+  </form>
+
+
+  <div id="listaVideos"></div>
+
+  <script src="videos.js"></script>
+</body>
+
+</html>

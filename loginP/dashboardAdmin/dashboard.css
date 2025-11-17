@@ -1,0 +1,194 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #740000;
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+nav button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #c70505;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #ff0000;
+}
+
+/* Seções */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.secao {
+  display: none;
+  margin-top: 20px;
+}
+
+.secao.ativa {
+  display: block;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+th,
+td {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+th {
+  background: #e6f0fa;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #fcdbdb;
+}
+
+#inicioGlobal {
+  width: 1000px;
+  position: center;
+}
+#editNome {
+  width:200px;
+  position: center;
+}
+#editHorario {
+  width:200px;
+  position: center;
+}
+
+#editSala {
+  width:200px;
+  position: center;
+}
+
+#editAluno{
+  width:200px;
+  position: center;
+}
+
+
+input {
+  width: 70px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c70505;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+button {
+  background: #c70505;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff0000;
+}
+
+#materia {
+  background-color: rgb(243, 225, 225);
+  color: #000000;
+  width: 50%;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+#materia:hover {
+  background-color: rgb(255, 0, 0);
+  color: #000000;
+}
+/* Form Add Professor */
+#formAddProfessor {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#formAddProfessor input {
+  flex: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav button {
+    margin: 5px 2px;
+    padding: 8px 12px;
+  }
+
+  #formAddProfessor {
+    flex-direction: column;
+  }
+
+  #formAddProfessor input,
+  #formAddProfessor button {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+  }
+}

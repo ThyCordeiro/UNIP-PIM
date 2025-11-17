@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(fundo\ media.png.jpg);
+    overflow-x: hidden;
+}
+
+.menu_nav ul {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color: white;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(7, 10, 50, 0.969);
+    border-radius: 5px;
+    position: relative;
+
+
+}
+
+.menu_nav ul li {
+    cursor: pointer;
+    margin: 120px;
+
+
+}
+
+.menu_nav a {
+    cursor: pointer;
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.menu_nav a:hover {
+    color: rgb(8, 208, 248);
+    transform: scale(1.05);
+
+}
+
+.resultado p {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+
+.aprovado {
+    color: green;
+}
+
+.reprovado {
+    color: red;
+}
+
+.titulo {
+    color: rgb(27, 26, 26);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.input_nota1 {
+
+
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 40px;
+    margin-left: 30%;
+    color: black
+}
+
+.input_nota2 {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 30%;
+    color: black
+}
+
+.input_pim {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 30%;
+    color: black;
+
+}
+
+
+.container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 950px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 10px;
+    overflow: hidden;
+    background: linear-gradient(150deg, rgba(111, 147, 218, 0.426), rgba(184, 196, 224, 0.631));
+    border-radius: 10px;
+
+}
+
+#p1 {
+    height: 40px;
+    position: absolute;
+    border-radius: 10px;
+    padding: 5px;
+
+
+}
+
+#p2 {
+    padding: 5px;
+    height: 40px;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+#pim {
+    padding: 5px;
+    height: 40px;
+    position: absolute;
+    border-radius: 10px;
+    width: 161px;
+
+}
+
+.calc_med {
+
+    height: 35px;
+    width: 100px;
+    color: rgb(57, 55, 55);
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    left: 320px;
+    top: 30px;
+
+}
+
+.calc_med:hover {
+    background-color: rgb(20, 20, 95);
+    color: white;
+
+
+
+}
+
+.media_final {
+    color: rgb(17, 16, 16);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Professor</title>
+    <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+    <header>
+      <h1>Painel do Professor</h1>
+      <nav>
+        <button onclick="mostrarSecao('alunos')">Alunos</button>
+        <button onclick="mostrarSecao('aulas')">Aulas</button>
+      </nav>
+    </header>
+    <main>
+      <!-- Seção Aulas -->
+      <section id="secao-aulas" class="secao ativa">
+        <h2>Grade de Aulas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Matéria</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="aulasTable"></tbody>
+        </table>
+      </section>
+
+      <!-- Seção Alunos -->
+      <section id="secao-alunos" class="secao">
+        <h3>Definir Início das Aulas (Global)</h3>
+        <input type="date" id="inicioGlobal">
+        <button onclick="salvarInicioGlobal()">Salvar Início</button>
+
+        <h2>Lista de Alunos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Nota/faltas</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="alunosTable"></tbody>
+        </table>
+      </section>
+
+
+      <!-- Seção Editar Aula -->
+      <section id="secao-editar-aula" class="secao">
+        <h2>Editar Aula</h2>
+        <form id="formEditarAula">
+          <label>Nome da Matéria:</label>
+          <input type="text" id="editNome" disabled><br>
+
+          <label>Horário:</label>
+          <input type="time" id="editHorario"><br>
+
+          <label>Sala:</label>
+          <input type="text" id="editSala"><br>
+
+          <h3>Alunos Matriculados</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="alunosDaAula"></tbody>
+          </table>
+
+          <h3>Adicionar Aluno</h3>
+          <select id="selectAluno"></select>
+          <button type="button"
+            onclick="adicionarAlunoNaAula()">Adicionar</button>
+
+          <br><br>
+          <button type="submit">Salvar Alterações</button>
+          <button type="button" onclick="mostrarSecao('aulas')">Voltar</button>
+        </form>
+      </section>
+
+    </main>
+
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>

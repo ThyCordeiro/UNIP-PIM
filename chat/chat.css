@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+  
+  background-color: white;
+   
+    /*
+    background: linear-gradient(135deg, #0ac1b1e6, #2ad3e9);
+    */
+  /*
+    background-image: url(fundo\ chat7.png.jpg);
+    */
+    /*
+ background: linear-gradient(135deg, #88a4f6, #5373fe);
+    
+/*
+    background: linear-gradient(135deg, #ce7070, #960202);
+ */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 50px;
+
+}
+
+
+.status {
+    background-color: #000000ac;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+
+.menu_nav ul {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color: white;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(50, 61, 226, 0.871);
+    position: relative;
+    bottom: 231px;
+    border: 1px solid black;
+  
+
+}
+
+.menu_nav ul li {
+    cursor: pointer;
+    margin: 120px;
+
+
+}
+
+.menu_nav a {
+    cursor: pointer;
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.menu_nav a:hover {
+    color: yellow;
+    transform: scale(1.05);
+
+}
+
+.image_logo{
+width: 350px;
+position: relative;
+top: 50px;
+
+
+
+
+
+}
+.text_logo{
+color: blue;
+position: relative;
+left: 7px;
+bottom: 230px;
+font-size: 50px;
+height: 80px;
+width: 100%px;
+background-color: yellow;
+border-radius: 10px;
+
+}
+.par_logo{
+font-size: 25px;
+position: relative;
+bottom: 255px;
+left: 140px;
+
+
+}
+
+
+
+.box_chat {
+    width: 800px;
+    height: 550px;
+    margin-bottom: 7px;
+    /*
+    border: 3px solid rgb(228, 242, 232);
+  
+    background-color: rgba(69, 68, 68, 0.5);
+      */
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+
+
+.btn_pesquisa {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.listra_stilo {
+    background-color: antiquewhite;
+    height: 2px;
+    width: 500px;
+    position: absolute;
+    top: 87%;
+    left: 92px;
+
+}
+
+.mensage_input {
+    height: 45px;
+    width: 500px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+
+
+}
+
+.btn_input:hover {
+    background-color: rgb(211, 216, 216);
+    cursor: pointer;
+
+}
+
+.btn_submit {
+    height: 45px;
+    width: 100px;
+    margin: 2px;
+    font-size: 20px;
+    background-color: rgb(44, 44, 38);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.btn_botao:hover {
+    background-color: rgb(51, 51, 248);
+    outline: none;
+
+}
+
+.historic {
+    overflow-y: auto;
+    height: 455px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Mensagem do usuário */
+.box-my-message {
+
+    background-color: rgba(13, 13, 14, 0.548);
+
+    padding: 10px 15px;
+    max-width: 70%;
+
+    align-self: flex-end;
+    border-radius: 15px 15px 0 15px;
+    color: rgb(240, 230, 230);
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+/* Mensagem da resposta do sistema */
+.box-response-message {
+    background-color: #23c3e79f;
+    padding: 10px 15px;
+    max-width: 70%;
+    align-self: flex-start;
+    border-radius: 25px 25px 25px 0;
+    color: #0c0c0cf5;
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+.perg_container {
+    position: absolute;
+    top: 95px;
+    left: 5px;
+    width: 450px;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+
+}
+
+.text_btn {
+    position: absolute;
+    left: 75px;
+    top: 75px;
+    width: 400px;
+    color: rgb(48, 49, 49);
+    font-size: 30px;
+    border-radius: 10px;
+
+
+
+}
+
+.perg_btn {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #9de1eed2;
+    border: 1px solid #191818;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 17px;
+
+}
+
+.perg_btn:hover {
+    background-color: #eaeaea;
+}
