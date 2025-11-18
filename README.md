@@ -45,5 +45,3 @@ Projeto desenvolvido em equipe para finalização do curso de **Análise e Desen
 
 
 ```md
-![Tela Inicial](./assets/tela-inicial.png)
-![Login](./assets/login.png)
