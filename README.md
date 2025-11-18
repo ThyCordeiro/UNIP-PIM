@@ -39,12 +39,10 @@ Nosso objetivo foi construir uma ferramenta que ofereça suporte prático, rápi
 
 Projeto desenvolvido em equipe para finalização do curso de **Análise e Desenvolvimento de Sistemas – UNIP**.
 
-> *(Adicione aqui os nomes e funções da equipe, se desejar.)*
+> *Thyago, Gabriel, Rogerio, Muriel*
 
 ---
 
-## 📸 Prévia do Sistema  
-*(Opcional — insira telas ou GIFs do projeto)*
 
 ```md
 ![Tela Inicial](./assets/tela-inicial.png)
