@@ -40,8 +40,3 @@ Nosso objetivo foi construir uma ferramenta que ofereça suporte prático, rápi
 Projeto desenvolvido em equipe para finalização do curso de **Análise e Desenvolvimento de Sistemas – UNIP**.
 
 > *Thyago, Gabriel, Rogerio, Muriel*
-
----
-
-
-```
